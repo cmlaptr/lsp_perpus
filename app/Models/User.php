@@ -19,8 +19,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'username',
         'password',
+        'foto',
+        'nis',
+        'alamat',
+        'kelas',
     ];
 
     /**
@@ -42,7 +46,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function peminjamans(){
+    public function peminjaman(){
         return $this->hasMany(Peminjaman::class);
     }
 }

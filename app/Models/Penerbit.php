@@ -9,7 +9,7 @@ class Penerbit extends Model
 {
     use HasFactory;
 
-    public function bukus(){
-        return this->hasMany(Buku::class);
+    public function buku(){
+        return $this->hasMany(Buku::class);
     }
 }

@@ -22,7 +22,10 @@
                         <div>{{ $b->penerbit->nama }}</div>
                     </div>
                     <div class="card-footer">
-                        <a href="{{ route('user.peminjaman')}}" class="btn btn-primary">Pinjam</a>
+                        <form method="POST" action="{{ route('user.form_peminjaman') }}">
+                            <input type="hidden" value="{{ $b->id }}" name="buku_id">
+                            <button class="btn btn-primary" type="submit">Pinjam</button>
+                        </form>
                     </div>
                 </div>
             </div>
